@@ -15,8 +15,7 @@ public class Address {
     private String street;
     private String city;
 
-    @ManyToOne
-    @JoinColumn(name = "employee_id")
+    @OneToOne
     private Employee employee;
 
 }

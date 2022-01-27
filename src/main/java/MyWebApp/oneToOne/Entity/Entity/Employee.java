@@ -3,6 +3,7 @@ package MyWebApp.oneToOne.Entity.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,4 +19,6 @@ public class Employee {
     private String firstName;
     private String lastName;
 
+    @OneToOne(mappedBy = "employee")
+    Address address;
 }
