@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 //@Entity
@@ -15,8 +17,7 @@ public class Address {
     private String street;
     private String city;
 
-    @ManyToOne
-    @JoinColumn(name = "employee_id")
-    private Employee employee;
+    @ManyToMany
+    private List<Employee> employees;
 
 }
